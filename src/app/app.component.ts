@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { Helpers } from "./helpers";
+import { LoginCustom } from './auth/_helpers/login-custom';
+import { ScriptLoaderService } from './_services/script-loader.service';
 
 @Component({
     selector: 'body',
@@ -11,7 +13,8 @@ export class AppComponent implements OnInit {
     title = 'app';
     globalBodyClass = 'm-page--loading-non-block m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default';
 
-    constructor(private _router: Router) {
+    constructor(private _router: Router,
+                private _script: ScriptLoaderService) {
     }
 
     ngOnInit() {
@@ -24,5 +27,7 @@ export class AppComponent implements OnInit {
                 Helpers.setLoading(false);
             }
         });
+        Helpers.setLoading(false);
+        LoginCustom.init();
     }
 }

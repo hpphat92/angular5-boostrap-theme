@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ScriptLoaderService } from "./_services/script-loader.service";
 import { ThemeRoutingModule } from "./theme/theme-routing.module";
 import { AuthModule } from "./auth/auth.module";
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -16,11 +17,12 @@ import { AuthModule } from "./auth/auth.module";
         AppComponent,
     ],
     imports: [
+        SharedModule,
         LayoutModule,
         BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
-        ThemeRoutingModule,
+        // ThemeRoutingModule,
         AuthModule,
     ],
     providers: [ScriptLoaderService],

@@ -1,15 +1,28 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LogoutComponent } from "./auth/logout/logout.component";
+import { LogoutComponent } from './auth/logout/logout.component';
+import { UnauthModule } from './unauth/unauth.module';
+import { AuthModule } from './auth/auth.module';
 
 const routes: Routes = [
-    { path: 'login', loadChildren: './auth/auth.module#AuthModule' },
-    { path: 'logout', component: LogoutComponent },
-    { path: '', redirectTo: 'index', pathMatch: 'full' },
+    { path: '', pathMatch: 'full', redirectTo: 'pages' },
+    {
+        path: 'pages', loadChildren: './unauth/unauth.module#UnauthModule'
+    },
+    {
+        path: 'home', loadChildren: './auth/auth.module#AuthModule'
+    },
+    {
+        path: '**',
+        redirectTo: 'pages'
+    }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, {
+        enableTracing: true
+    })],
     exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
