@@ -6,22 +6,28 @@ import { MockBackend } from '@angular/http/testing';
 
 import { AuthRoutingModule } from './auth-routing.routing';
 import { AuthComponent } from './auth.component';
-import { AlertComponent } from './_directives';
+import { AlertComponent } from '../shared/directives';
 import { LogoutComponent } from './logout/logout.component';
-import { AuthGuard } from './_guards';
-import { AlertService } from './_services';
-import { AuthenticationService } from './_services';
-import { UserService } from './_services';
-import { fakeBackendProvider } from './_helpers';
+import { AuthGuard } from '../shared/guards';
+import { AlertService } from '../shared/services';
+import { AuthenticationService } from '../shared/services';
+import { UserService } from '../shared/services';
+import { fakeBackendProvider } from '../shared/helpers';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
+import { UsersComponent } from './users/users.component';
+import { StepsComponent } from './steps/steps.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
     declarations: [
         AuthComponent,
         AlertComponent,
         LogoutComponent,
-        DashboardComponent
+        DashboardComponent,
+        UsersComponent,
+        StepsComponent,
+        TimelineComponent
     ],
     imports: [
         SharedModule,

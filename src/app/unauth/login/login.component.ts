@@ -7,11 +7,11 @@ import {
     ViewEncapsulation,
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AlertService, AuthenticationService, UserService } from '../../auth/_services';
+import { AlertService, AuthenticationService, UserService } from '../../shared/services';
 import { Helpers } from '../../helpers';
-import { LoginCustom } from '../../auth/_helpers/login-custom';
-import { ScriptLoaderService } from '../../_services/script-loader.service';
-import { AlertComponent } from '../../auth/_directives';
+import { LoginCustom } from '../../shared/helpers/login-custom';
+import { ScriptLoaderService } from '../../theme/layouts/_services/script-loader.service';
+import { AlertComponent } from '../../shared/directives';
 
 @Component({
     selector: 'login',

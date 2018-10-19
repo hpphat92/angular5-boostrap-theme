@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { Helpers } from "./helpers";
-import { LoginCustom } from './auth/_helpers/login-custom';
-import { ScriptLoaderService } from './_services/script-loader.service';
+import { LoginCustom } from './shared/helpers/login-custom';
+import { ScriptLoaderService } from './theme/layouts/_services/script-loader.service';
 
 @Component({
     selector: 'body',
