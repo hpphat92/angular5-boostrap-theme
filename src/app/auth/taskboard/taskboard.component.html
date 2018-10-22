@@ -17,57 +17,40 @@
                 <div class="col-title">{{col.title}}</div>
                 <i class="flaticon-more"></i>
             </div>
-            <div class="tasks"
-                 ngxDroppable
-                 [model]="col.tasks"
-                 [class.no-tasks]="!col.tasks || !col.tasks.length">
-                <div class="task" *ngFor="let task of col.tasks" ngxDraggable [model]="task">
-                    <div class="task-content">
-                        <div class="task-title">{{task.title}}</div>
+            <div class="tasks">
+                <div class="dropabble"
+                     [class.no-tasks]="!col.tasks || !col.tasks.length"
+                     ngxDroppable="tasks"
+                     [model]="col.tasks">
+                    <div class="task" *ngFor="let task of col.tasks" ngxDraggable="tasks" [model]="task">
+                        <!--<div class="handler" ngxDragHandle>-->
+                            <!--<i class="fa fa-ellipsis-h" aria-hidden="true"></i>-->
+                        <!--</div>-->
+                        <div class="task-content">
+                            <div class="task-title">{{task.title}}</div>
 
-                        <div class="attendant">
-                            <div class="user-photo" *ngFor="let photo of task.users">
-                                <img class="user"
-                                     [src]="photo"/>
+                            <div class="attendant">
+                                <div class="user-photo" *ngFor="let photo of task.users">
+                                    <img class="user"
+                                         [src]="photo"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task-footer">
+                            <div class="count">
+                                <i class="flaticon-attachment"></i>
+                                <div class="value">{{task.attachments}}</div>
+                            </div>
+                            <div class="count">
+                                <i class="flaticon-comment"></i>
+                                <div class="value">{{task.comments}}</div>
                             </div>
                         </div>
                     </div>
-                    <div class="task-footer">
-                        <div class="count">
-                            <i class="flaticon-attachment"></i>
-                            <div class="value">{{task.attachments}}</div>
-                        </div>
-                        <div class="count">
-                            <i class="flaticon-comment"></i>
-                            <div class="value">{{task.comments}}</div>
-                        </div>
-                    </div>
                 </div>
-                <div class="no-task-msg" *ngIf="!col.tasks || !col.tasks.length">
-                    No tasks. Drag tasks here
+                <div class="add-task-button" (click)="addTask()" *ngIf="col.tasks && col.tasks.length">
+                    <i class="fa fa-plus"></i> Add task
                 </div>
-                <!--<div class="task placeholder">-->
-                    <!--<div class="task-content">-->
-                        <!--<div class="task-title">{{currentDraggingItem.title}}</div>-->
-
-                        <!--<div class="attendant">-->
-                            <!--<div class="user-photo" *ngFor="let photo of currentDraggingItem.users">-->
-                                <!--<img class="user"-->
-                                     <!--[src]="photo"/>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="task-footer">-->
-                        <!--<div class="count">-->
-                            <!--<i class="flaticon-attachment"></i>-->
-                            <!--<div class="value">{{currentDraggingItem.attachments}}</div>-->
-                        <!--</div>-->
-                        <!--<div class="count">-->
-                            <!--<i class="flaticon-comment"></i>-->
-                            <!--<div class="value">{{currentDraggingItem.comments}}</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
             </div>
         </div>
     </div>

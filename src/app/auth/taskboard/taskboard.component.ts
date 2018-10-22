@@ -107,4 +107,8 @@ export class TaskboardComponent implements OnInit {
                 break;
         }
     }
+
+    addTask() {
+        alert('add task');
+    }
 }
