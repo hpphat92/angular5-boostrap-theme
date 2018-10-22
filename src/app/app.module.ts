@@ -11,7 +11,6 @@ import { ThemeRoutingModule } from "./theme/theme-routing.module";
 import { AuthModule } from "./auth/auth.module";
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 @NgModule({
     declarations: [
         ThemeComponent,

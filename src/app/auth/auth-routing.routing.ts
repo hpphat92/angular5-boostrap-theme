@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
 import { StepsComponent } from './steps/steps.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { TaskboardComponent } from './taskboard/taskboard.component';
 
 const routes: Routes = [
     {
@@ -16,6 +17,7 @@ const routes: Routes = [
             { path: 'users', component: UsersComponent },
             { path: 'steps', component: StepsComponent },
             { path: 'timeline', component: TimelineComponent },
+            { path: 'taskboard', component: TaskboardComponent },
         ]
     },
     { path: '**', redirectTo: '' },

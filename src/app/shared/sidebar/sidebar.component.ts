@@ -38,6 +38,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
             href: '/home/timeline'
         },
         {
+            title: 'Taskboard',
+            href: '/home/taskboard'
+        },
+        {
             title: 'Users',
             subMenu: [
                 // {

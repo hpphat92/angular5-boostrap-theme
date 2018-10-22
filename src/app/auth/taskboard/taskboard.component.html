@@ -1,0 +1,74 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="m-subheader__title">
+                Users
+            </h3>
+        </div>
+    </div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+    <div class="taskboard">
+        <div class="column" [ngClass]="col.className" *ngFor="let col of columns">
+            <div class="column-header">
+                <div class="count-tasks">{{col.tasks.length}}</div>
+                <div class="col-title">{{col.title}}</div>
+                <i class="flaticon-more"></i>
+            </div>
+            <div class="tasks"
+                 ngxDroppable
+                 [model]="col.tasks"
+                 [class.no-tasks]="!col.tasks || !col.tasks.length">
+                <div class="task" *ngFor="let task of col.tasks" ngxDraggable [model]="task">
+                    <div class="task-content">
+                        <div class="task-title">{{task.title}}</div>
+
+                        <div class="attendant">
+                            <div class="user-photo" *ngFor="let photo of task.users">
+                                <img class="user"
+                                     [src]="photo"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-footer">
+                        <div class="count">
+                            <i class="flaticon-attachment"></i>
+                            <div class="value">{{task.attachments}}</div>
+                        </div>
+                        <div class="count">
+                            <i class="flaticon-comment"></i>
+                            <div class="value">{{task.comments}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="no-task-msg" *ngIf="!col.tasks || !col.tasks.length">
+                    No tasks. Drag tasks here
+                </div>
+                <!--<div class="task placeholder">-->
+                    <!--<div class="task-content">-->
+                        <!--<div class="task-title">{{currentDraggingItem.title}}</div>-->
+
+                        <!--<div class="attendant">-->
+                            <!--<div class="user-photo" *ngFor="let photo of currentDraggingItem.users">-->
+                                <!--<img class="user"-->
+                                     <!--[src]="photo"/>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="task-footer">-->
+                        <!--<div class="count">-->
+                            <!--<i class="flaticon-attachment"></i>-->
+                            <!--<div class="value">{{currentDraggingItem.attachments}}</div>-->
+                        <!--</div>-->
+                        <!--<div class="count">-->
+                            <!--<i class="flaticon-comment"></i>-->
+                            <!--<div class="value">{{currentDraggingItem.comments}}</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>

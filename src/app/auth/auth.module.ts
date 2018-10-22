@@ -18,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
 import { UsersComponent } from './users/users.component';
 import { StepsComponent } from './steps/steps.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { TaskboardComponent } from './taskboard/taskboard.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { TimelineComponent } from './timeline/timeline.component';
         DashboardComponent,
         UsersComponent,
         StepsComponent,
-        TimelineComponent
+        TimelineComponent,
+        TaskboardComponent
     ],
     imports: [
         SharedModule,

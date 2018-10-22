@@ -7,6 +7,7 @@ import { Ng2TableModule } from 'ng2-table/ng2-table';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableModule } from 'primeng/table';
 import { DataTableModule } from 'primeng/primeng';
+import { NgxDnDModule } from '@swimlane/ngx-dnd';
 let components = [
     SidebarComponent,
     HeaderComponent
@@ -15,7 +16,8 @@ let modules = [
     Ng2TableModule,
     NgbModule,
     TableModule,
-    DataTableModule
+    DataTableModule,
+    NgxDnDModule
 ];
 
 @NgModule({

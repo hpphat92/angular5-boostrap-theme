@@ -10,6 +10,8 @@ import {
 })
 
 export class StepsComponent implements OnInit {
+    ngOnInit(): void {
+    }
 
     folders = [
         {
