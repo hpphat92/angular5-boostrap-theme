@@ -1,7 +1,7 @@
 import {
     Component,
     OnInit,
-    } from '@angular/core';
+} from '@angular/core';
 
 @Component({
     selector: 'steps',
@@ -11,6 +11,15 @@ import {
 
 export class StepsComponent implements OnInit {
     ngOnInit(): void {
+    }
+
+    public currentStep = 1;
+
+    public setStep(step) {
+        this.currentStep = step;
+        if (this.currentStep < 1) {
+            this.currentStep = 1;
+        }
     }
 
     folders = [

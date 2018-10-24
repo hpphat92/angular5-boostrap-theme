@@ -8,16 +8,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableModule } from 'primeng/table';
 import { DataTableModule } from 'primeng/primeng';
 import { NgxDnDModule } from '@swimlane/ngx-dnd';
+import { WizardModule } from 'ngx-wizard';
 let components = [
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
 ];
 let modules = [
     Ng2TableModule,
     NgbModule,
     TableModule,
     DataTableModule,
-    NgxDnDModule
+    NgxDnDModule,
+    WizardModule
 ];
 
 @NgModule({
