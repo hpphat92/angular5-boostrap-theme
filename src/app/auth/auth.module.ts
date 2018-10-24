@@ -19,6 +19,8 @@ import { UsersComponent } from './users/users.component';
 import { StepsComponent } from './steps/steps.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TaskboardComponent } from './taskboard/taskboard.component';
+import { Section1ForSsqUseComponent } from './steps/section-1-for-ssq-use/section-1-for-ssq-use.component';
+import { Section4ImplementationStatusComponent } from './steps/section-4-implementation-status/section-4-implementation-status.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +31,9 @@ import { TaskboardComponent } from './taskboard/taskboard.component';
         UsersComponent,
         StepsComponent,
         TimelineComponent,
-        TaskboardComponent
+        TaskboardComponent,
+        Section1ForSsqUseComponent,
+        Section4ImplementationStatusComponent
     ],
     imports: [
         SharedModule,

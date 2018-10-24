@@ -86,7 +86,7 @@ export class TaskboardComponent implements OnInit {
     onDrop(event: DndDropEvent, col) {
 
         if (col.tasks && (event.dropEffect === 'copy'
-                || event.dropEffect === 'move')) {
+            || event.dropEffect === 'move')) {
 
             let index = event.index;
 
