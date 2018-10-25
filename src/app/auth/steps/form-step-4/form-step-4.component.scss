@@ -1,0 +1,45 @@
+:host /deep/ {
+  width: 100%;
+  .table-risk-matrix {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 10px auto 0 auto;
+    color: #575962;
+    th, td {
+      border: 1px solid #ebedf2;
+    }
+    th {
+      background: #d5d5d5;
+      padding: 5px;
+      font-weight: 600;
+    }
+    td {
+      font-weight: 500;
+      padding: 3px;
+    }
+    .level-description-col {
+      width: 100px;
+    }
+    .extreme {
+      background: #C00000;
+      color: #fff;
+      font-weight: 600;
+    }
+    .high {
+      background: #FF0000;
+      color: #fff;
+      font-weight: 600;
+    }
+    .medium {
+      background: #FFC000;
+      //color: #fff;
+      font-weight: 600;
+    }
+    .low {
+      background: #91D050;
+      //color: #fff;
+      font-weight: 600;
+    }
+  }
+}

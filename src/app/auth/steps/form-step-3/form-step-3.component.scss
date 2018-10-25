@@ -1,0 +1,42 @@
+:host /deep/ {
+  width: 100%;
+  .selection-area {
+    .header {
+      display: flex;
+      align-items: center;
+      line-height: 3;
+      justify-content: center;
+      padding: 5px 10px;
+    }
+    .cell {
+      display: flex;
+      align-items: center;
+      line-height: 3;
+      justify-content: center;
+      padding: 5px 10px;
+      &.active {
+        & > * {
+          background: #716aca;
+          color: #fff;
+        }
+      }
+      &:not(.active) {
+        & > *:hover {
+          background: #f2dfff;
+        }
+      }
+      & > * {
+        cursor: pointer;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #eee;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+
+      }
+    }
+  }
+}

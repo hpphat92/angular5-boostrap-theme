@@ -5,7 +5,7 @@ import { UnauthModule } from './unauth/unauth.module';
 import { AuthModule } from './auth/auth.module';
 
 const routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'pages' },
+    { path: '', pathMatch: 'full', redirectTo: 'home' },
     {
         path: 'pages', loadChildren: './unauth/unauth.module#UnauthModule'
     },

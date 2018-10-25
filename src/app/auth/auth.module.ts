@@ -19,6 +19,8 @@ import { UsersComponent } from './users/users.component';
 import { StepsComponent } from './steps/steps.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TaskboardComponent } from './taskboard/taskboard.component';
+import { FormStep3Component } from './steps/form-step-3/form-step-3.component';
+import { FormStep4Component } from './steps/form-step-4/form-step-4.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +31,9 @@ import { TaskboardComponent } from './taskboard/taskboard.component';
         UsersComponent,
         StepsComponent,
         TimelineComponent,
-        TaskboardComponent
+        TaskboardComponent,
+        FormStep3Component,
+        FormStep4Component
     ],
     imports: [
         SharedModule,

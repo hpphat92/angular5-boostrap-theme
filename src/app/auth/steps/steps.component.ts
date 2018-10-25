@@ -13,7 +13,7 @@ export class StepsComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    public currentStep = 1;
+    public currentStep = 4;
 
     public setStep(step) {
         this.currentStep = step;

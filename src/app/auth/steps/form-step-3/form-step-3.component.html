@@ -1,0 +1,136 @@
+<div class="form-group m-form__group row col-8 offset-2">
+    <label class="col-3 col-form-label">Select Hazard # to Assess</label>
+    <div class="col-9">
+        <select class="form-control m-input">
+            <option value="" disabled>Select</option>
+            <option value="1">Hazard 1</option>
+            <option value="2">Hazard 2</option>
+        </select>
+    </div>
+</div>
+<div class="selection-area">
+    <div class="row">
+        <b class="col-2 header"><span>Almost Certain (5)</span></b>
+        <div class="col-2 cell" (click)="select('A',5)" [class.active]="currentSelectedOpt['A'] == 5">
+            <span>Medium (5A)</span></div>
+        <div class="col-2 cell" (click)="select('B',5)" [class.active]="currentSelectedOpt['B'] == 5">
+            <span>Medium (5B)</span></div>
+        <div class="col-2 cell" (click)="select('C',5)" [class.active]="currentSelectedOpt['C'] == 5">
+            <span>High (5C)</span></div>
+        <div class="col-2 cell" (click)="select('D',5)" [class.active]="currentSelectedOpt['D'] == 5">
+            <span>Extreme (5D)</span></div>
+        <div class="col-2 cell" (click)="select('E',5)" [class.active]="currentSelectedOpt['E'] == 5">
+            <span>Extreme (5E)</span></div>
+    </div>
+    <div class="row">
+        <b class="col-2 header"><span>Likely (4)</span></b>
+        <div class="col-2 cell" (click)="select('A',4)" [class.active]="currentSelectedOpt['A'] == 4">
+            <span>Low (4A)</span></div>
+        <div class="col-2 cell" (click)="select('B',4)" [class.active]="currentSelectedOpt['B'] == 4">
+            <span>Medium (4B)</span></div>
+        <div class="col-2 cell" (click)="select('C',4)" [class.active]="currentSelectedOpt['C'] == 4">
+            <span>High (4C)</span></div>
+        <div class="col-2 cell" (click)="select('D',4)" [class.active]="currentSelectedOpt['D'] == 4">
+            <span>Extreme (4D)</span></div>
+        <div class="col-2 cell" (click)="select('E',4)" [class.active]="currentSelectedOpt['E'] == 4">
+            <span>Extreme (4E)</span></div>
+    </div>
+    <div class="row">
+        <b class="col-2 header"><span>Possible (3)</span></b>
+        <div class="col-2 cell" (click)="select('A',3)" [class.active]="currentSelectedOpt['A'] == 3">
+            <span>Low (3A)</span></div>
+        <div class="col-2 cell" (click)="select('B',3)" [class.active]="currentSelectedOpt['B'] == 3">
+            <span>Low (3B)</span></div>
+        <div class="col-2 cell" (click)="select('C',3)" [class.active]="currentSelectedOpt['C'] == 3">
+            <span>Medium (3C)</span></div>
+        <div class="col-2 cell" (click)="select('D',3)" [class.active]="currentSelectedOpt['D'] == 3">
+            <span>High (3D)</span></div>
+        <div class="col-2 cell" (click)="select('E',3)" [class.active]="currentSelectedOpt['E'] == 3">
+            <span>Extreme (3E)</span></div>
+    </div>
+    <div class="row">
+        <b class="col-2 header"><span>Unlikely (2)</span></b>
+        <div class="col-2 cell" (click)="select('A',2)" [class.active]="currentSelectedOpt['A'] == 2">
+            <span>Low (2A)</span></div>
+        <div class="col-2 cell" (click)="select('B',2)" [class.active]="currentSelectedOpt['B'] == 2">
+            <span>Low (2B)</span></div>
+        <div class="col-2 cell" (click)="select('C',2)" [class.active]="currentSelectedOpt['C'] == 2">
+            <span>Low (2C)</span></div>
+        <div class="col-2 cell" (click)="select('D',2)" [class.active]="currentSelectedOpt['D'] == 2">
+            <span>Medium (2D)</span></div>
+        <div class="col-2 cell" (click)="select('E',2)" [class.active]="currentSelectedOpt['E'] == 2">
+            <span>High (2E)</span></div>
+    </div>
+    <div class="row">
+        <b class="col-2 header"><span>Rare (1)</span></b>
+        <div class="col-2 cell" (click)="select('A',1)" [class.active]="currentSelectedOpt['A'] == 1">
+            <span>Low (1A)</span></div>
+        <div class="col-2 cell" (click)="select('B',1)" [class.active]="currentSelectedOpt['B'] == 1">
+            <span>Low (1B)</span></div>
+        <div class="col-2 cell" (click)="select('C',1)" [class.active]="currentSelectedOpt['C'] == 1">
+            <span>Low (1C)</span></div>
+        <div class="col-2 cell" (click)="select('D',1)" [class.active]="currentSelectedOpt['D'] == 1">
+            <span>Low (1D)</span></div>
+        <div class="col-2 cell" (click)="select('E',1)" [class.active]="currentSelectedOpt['E'] == 1">
+            <span>Medium (1E)</span></div>
+    </div>
+    <div class="row">
+        <b class="col-2 header"><span></span></b>
+        <b class="col-2 header"><span>Negligible (A)</span></b>
+        <b class="col-2 header"><span>Minor(B)</span></b>
+        <b class="col-2 header"><span>Major (C)</span></b>
+        <b class="col-2 header"><span>Hazardous (D)</span></b>
+        <b class="col-2 header"><span>Catastrophic (E)</span></b>
+    </div>
+</div>
+<ng-template ngFor let-item [ngForOf]="[1,2,3]" let-i="index">
+
+
+    <div class="form-group m-form__group row">
+        <label class="col-lg-2 col-form-label">Hazard {{i}}</label>
+        <div class="col-lg-4">
+            <textarea class="form-control m-input" rows="6" placeholder="Enter the Hazard 1"></textarea>
+        </div>
+        <label class="col-lg-2 col-form-label">Potential Consequence {{i}}</label>
+        <div class="col-lg-4">
+            <input type="text" class="form-control m-input" placeholder="Potential Consequence 1">
+            <!--<span class="m-form__help">Please enter your contact number</span>-->
+        </div>
+    </div>
+    <div class="form-group m-form__group row">
+        <label class="col-lg-2 col-form-label">Risk Probability {{i}}</label>
+        <div class="col-lg-4">
+            <select class="form-control m-input">
+                <option value="" disabled>Select</option>
+                <option value="1">Option A</option>
+                <option value="2">Option B</option>
+            </select>
+        </div>
+        <label class="col-lg-2 col-form-label">Risk Severity {{i}}</label>
+        <div class="col-lg-4">
+            <select class="form-control m-input">
+                <option value="" disabled>Select</option>
+                <option value="1">Option A</option>
+                <option value="2">Option B</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group m-form__group row">
+        <label class="col-lg-2 col-form-label">Risk Assessment Result {{i}}</label>
+        <div class="col-lg-4">
+            <select class="form-control m-input">
+                <option value="" disabled>Select</option>
+                <option value="1">Option A</option>
+                <option value="2">Option B</option>
+            </select>
+        </div>
+        <label class="col-lg-2 col-form-label">Risk {{i}} Category</label>
+        <div class="col-lg-4">
+            <select class="form-control m-input">
+                <option value="" disabled>Select</option>
+                <option value="1">Option A</option>
+                <option value="2">Option B</option>
+            </select>
+        </div>
+    </div>
+</ng-template>
