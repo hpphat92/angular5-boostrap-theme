@@ -35,7 +35,7 @@ import { FormStep4Component } from './steps/form-step-4/form-step-4.component';
         TimelineComponent,
         TaskboardComponent,
         FormStep3Component,
-        FormStep4Component
+        FormStep4Component,
         TaskboardComponent,
         Section1ForSsqUseComponent,
         Section4ImplementationStatusComponent
