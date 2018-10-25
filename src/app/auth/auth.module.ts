@@ -19,6 +19,8 @@ import { UsersComponent } from './users/users.component';
 import { StepsComponent } from './steps/steps.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TaskboardComponent } from './taskboard/taskboard.component';
+import { Section1ForSsqUseComponent } from './steps/section-1-for-ssq-use/section-1-for-ssq-use.component';
+import { Section4ImplementationStatusComponent } from './steps/section-4-implementation-status/section-4-implementation-status.component';
 import { FormStep3Component } from './steps/form-step-3/form-step-3.component';
 import { FormStep4Component } from './steps/form-step-4/form-step-4.component';
 
@@ -34,6 +36,9 @@ import { FormStep4Component } from './steps/form-step-4/form-step-4.component';
         TaskboardComponent,
         FormStep3Component,
         FormStep4Component
+        TaskboardComponent,
+        Section1ForSsqUseComponent,
+        Section4ImplementationStatusComponent
     ],
     imports: [
         SharedModule,

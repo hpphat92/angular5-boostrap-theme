@@ -32,12 +32,12 @@ export class LoginComponent implements OnInit {
         { read: ViewContainerRef }) alertForgotPass: ViewContainerRef;
 
     constructor(private _router: Router,
-                private _script: ScriptLoaderService,
-                private _userService: UserService,
-                private _route: ActivatedRoute,
-                private _authService: AuthenticationService,
-                private _alertService: AlertService,
-                private cfr: ComponentFactoryResolver) {
+        private _script: ScriptLoaderService,
+        private _userService: UserService,
+        private _route: ActivatedRoute,
+        private _authService: AuthenticationService,
+        private _alertService: AlertService,
+        private cfr: ComponentFactoryResolver) {
     }
 
     ngOnInit() {

@@ -19,7 +19,7 @@ import { Helpers } from '../helpers';
     selector: 'auth',
     templateUrl: './auth.component.html',
     styleUrls: ['./auth.component.scss'],
-        // encapsulation: ViewEncapsulation.None,
+    // encapsulation: ViewEncapsulation.None,
 })
 
 export class AuthComponent implements OnInit {

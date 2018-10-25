@@ -1,7 +1,7 @@
 import {
     Component,
     OnInit,
-    } from '@angular/core';
+} from '@angular/core';
 
 @Component({
     selector: 'timeline',
